@@ -12,6 +12,11 @@ public class PropertiesUtil {
 
 	private static Properties p;
 
+	/**
+	 * @param config "/config.properties"
+	 * @param charset "utf-8"
+	 * @return
+	 */
 	public static Properties getProperties(String config,String charset) {
 		if (p == null) {
 			p = new Properties();
@@ -22,5 +27,13 @@ public class PropertiesUtil {
 			}
 		}
 		return p;
+	}
+	
+	public static Properties getProperties(String config) {
+		return PropertiesUtil.getProperties(config, "utf-8");
+	}
+	
+	public static Properties getProperties() {
+		return PropertiesUtil.getProperties("/config.properties");
 	}
 }
