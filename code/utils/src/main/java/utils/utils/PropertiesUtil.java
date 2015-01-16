@@ -1,0 +1,26 @@
+package utils.utils;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Properties;
+
+/**
+ * 配置文件加载工具
+ * 
+ */
+public class PropertiesUtil {
+
+	private static Properties p;
+
+	public static Properties getProperties(String config,String charset) {
+		if (p == null) {
+			p = new Properties();
+			try {
+				p.load(new InputStreamReader(PropertiesUtil.class.getClassLoader().getResourceAsStream(config), charset));
+			} catch (IOException e) {
+				LogUtil.getInstance().getLogger(PropertiesUtil.class).error("配置文件properties初始化错误：" + e.getMessage());
+			}
+		}
+		return p;
+	}
+}
