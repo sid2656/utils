@@ -10,6 +10,10 @@
 	<name>utils</name>
 	<url>http://maven.apache.org</url>
 
+	<properties>
+		<gson.version>2.2.4</gson.version>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
@@ -23,6 +27,12 @@
 			<version>1.8.3</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
