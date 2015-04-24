@@ -11,6 +11,8 @@ import java.util.Vector;
 @SuppressWarnings({ "rawtypes", "unchecked" })
 public final class DateUtil {
 
+    public static String INITTIME = "00000000000000";
+    
     static Calendar cld;
 
 
