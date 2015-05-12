@@ -34,6 +34,6 @@ public class PropertiesUtil {
 	}
 	
 	public static Properties getProperties() {
-		return PropertiesUtil.getProperties("/config.properties");
+		return PropertiesUtil.getProperties("config.properties");
 	}
 }
