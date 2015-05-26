@@ -11,15 +11,18 @@ import java.util.Properties;
 public class PropertiesUtil {
 
 	private static Properties p;
+	
+	private static String config;
 
 	/**
-	 * @param config "/config.properties"
+	 * @param config "config.properties"
 	 * @param charset "utf-8"
 	 * @return
 	 */
 	public static Properties getProperties(String config,String charset) {
-		if (p == null) {
+		if (p == null||(!config.equals(PropertiesUtil.config))) {
 			p = new Properties();
+			PropertiesUtil.config = config;
 			try {
 				p.load(new InputStreamReader(PropertiesUtil.class.getClassLoader().getResourceAsStream(config), charset));
 			} catch (IOException e) {
