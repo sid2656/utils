@@ -1698,6 +1698,11 @@ public class DataTypeUtil {
 					return false;
 				}
 			}
+			if (obj instanceof Map){
+				if (((Map) obj).keySet().isEmpty()) {
+					return false;
+				}
+			}
 		}
 		
 		return true;
